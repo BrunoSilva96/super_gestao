@@ -23,3 +23,7 @@ Route::prefix('/app')->group(function(){
 
 //Route::redirect('/route2', 'route1');
 //Redireciona caso nao haja rota
+
+Route::fallback(function() {
+  echo 'A rota acessada não existe.<a href="'.route('site.index').'"> clique aqui para ir para a página inicial';
+});
