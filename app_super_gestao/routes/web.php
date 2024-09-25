@@ -20,3 +20,6 @@ Route::prefix('/app')->group(function(){
   Route::get('/fornecedores', function(){ return 'Fornecedores'; })->name('app.fornecedores');
   Route::get('/produtos', function(){ return 'Produtos'; })->name('app.produtos');
 });
+
+//Route::redirect('/route2', 'route1');
+//Redireciona caso nao haja rota
