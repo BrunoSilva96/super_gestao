@@ -24,6 +24,8 @@ Route::prefix('/app')->group(function(){
 //Route::redirect('/route2', 'route1');
 //Redireciona caso nao haja rota
 
+Route::get('/teste/{p1}/{p2}', [\App\Http\Controllers\TesteController::class, 'teste'])->name('teste');
+
 Route::fallback(function() {
-  echo 'A rota acessada não existe.<a href="'.route('site.index').'"> clique aqui para ir para a página inicial';
+  echo 'A rota acessada não existe.<a href="'.route('site.index').'"> clique aqui </a> para ir para a página inicial';
 });
