@@ -6,7 +6,10 @@ use Illuminate\Http\Request;
 
 class PrincipalController extends Controller
 {
-    public function principal($nome){
-        return view('site.principal')->with('nome', $nome);
+    public function principal(string $nome = 'Visitante',int $categoria_id = 1){
+        return view('site.principal', ['nome' => $nome, 'categoria' => $categoria_id]);
+        //$dados = ['nome' => $nome, 'categoria' => $categoria_id];
+        // Colcoar dentro de um array e passa no return
+        //return view('siteprincipal', $dados)
     }               
 }

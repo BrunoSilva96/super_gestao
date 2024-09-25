@@ -1,1 +1,1 @@
-<h3> Principal (view) - {{$nome}} </h3>
+<h3> Principal (view) - {{$nome}} - {{$categoria}} </h3>
