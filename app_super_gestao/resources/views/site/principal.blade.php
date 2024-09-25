@@ -1,1 +1,1 @@
-<h3> Principal (view) </h3>
+<h3> Principal (view) - {{$nome}} </h3>
