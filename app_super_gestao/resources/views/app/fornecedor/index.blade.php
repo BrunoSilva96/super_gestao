@@ -23,14 +23,15 @@
   <h3>Aainda não existem fornecedores cadastrados</h3>
 @endif --}}
 
-Fornecedor: {{ $fornecedores[0]['nome'] }}
-<br/>
-Status: {{$fornecedores[0]['status']}}
-<br/>
-@if(! ($fornecedores[0]['status'] == 'S'))
-  Fornecedor inativo
-@endif
-<br/>
-@unless($fornecedores[0]['status'] == 'S') <!-- Executa se a condição for false -->
-  Fornecedor inativo
-@endunless
+
+@isset($fornecedores)<!-- Age como verificador de parametro e não estoura um erro, se não é passado, ele apenas não faz nada-->
+  Fornecedor: {{ $fornecedores[0]['nome'] }}
+  <br/>
+  Status: {{$fornecedores[0]['status']}}
+  <br/>
+  @isset($fornecedores[0]['cnpj'])
+    CNPJ: {{$fornecedores[0]['cnpj']}}
+  @endisset
+  <br/>
+  
+@endisset
