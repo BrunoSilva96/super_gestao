@@ -27,6 +27,6 @@ class AlteFonecedoresNovasColunas extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists(['uf', 'email']);
     }
 }
