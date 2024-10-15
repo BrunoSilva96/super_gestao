@@ -19,7 +19,7 @@ class AlterTableSiteContatosAddFkMotivoContatos extends Migration
         });
 
         //atribuindo motivo_contato para a nova coluna motivo_contatos_id
-        DB::statement('update site_contatos set motivo_contatos_id = motivo_contato');
+        DB::statement('UPDATE site_contatos SET motivo_contatos_id = motivo_contato');
 
         //criando FK e removendo a coluna motivo contato
         Schema::table('site_contatos', function (Blueprint $table) {
